@@ -1,70 +1,65 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-<meta charset="utf-8">
-<title>Đếm ngược Tết Nhâm Dần 2022</title>
-<link rel="stylesheet" href="style.css">
-<link rel="shortcut icon" href="icon.png" />
-<link rel="stylesheet" href="bootstrap.min.css">
-<script type="text/javascript" src="hoa.js"></script>
-</head>
-<body>
-<div class="container">
-<br>
-<h2><span>ĐẾM NGƯỢC TẾT NHÂM DẦN</span>2022</h2>
-<div class="countdown">
-<div id="day">Chúc</div>
-<div id="hour">Mừng</div>
-<div id="minute">Năm</div>
-<div id="second">Mới</div>
-</div>
-<div id="taitro">
-<a href="https://www.facebook.com/100005517036526.Thawngs/" class="btn btn-outline-warning btn-sm" target="_blank">About me?</a>
-</div>
-</div>
-<script type="text/javascript">
-        var countDate = new Date('Feb 01, 2022 00:00:00').getTime();
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
 
-        function newYear() {
-            var now = new Date().getTime();
-            gap = countDate - now;
+        <title>My Crush</title>
+    </head>
+    <body>
+        <div class="app">
+            <div class="card mg-10" id="card1">
+                <div class="card__title">
+                    <div class="col_third" id="heart">	
+                        <i class="fa fa-heart fa-8x"></i>
+                    </div>
+                    <div class="card__title--name">
+                        <h1> Sang năm 2022 Crush có thích bạn không? </h1>
+                    </div>
+                </div>
+                <div class="button__list mt-10">
+                    <div class="row">
+                        <div class="col col-lg-6 mt-10">
+                            <div class="button button__message btnNo" onclick="showMess()">
+                                <span>  </span>
+                            </div>
+                        </div>
+                        <div class="col col-lg-6 mt-10">
+                            <div class="button button__subscribe btnNo" onclick="showMess()">
+                                <span> Không </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            var second = 1000;
-            var minute = second * 60;
-            var hour = minute * 60;
-            var day = hour * 24;
-
-            var d = Math.floor(gap / (day));
-            var h = Math.floor((gap % (day)) / (hour));
-            var m = Math.floor((gap % (hour)) / (minute));
-            var s = Math.floor((gap % (minute)) / (second));
-
-            document.getElementById('day').innerText = d;
-            document.getElementById('hour').innerText = h;
-            document.getElementById('minute').innerText = m;
-            document.getElementById('second').innerText = s;
-        }
-        setInterval(function () {
-            newYear();
-        }, 1000)
-    </script>
-
-<div class='music-box'>
-<a title='Play music'><i class='fa fa-music'></i></a>
-</button>
-<div class='music-holder'>
-<iframe allow='autoplay; encrypted-media' allowfullscreen='' frameborder='0' height='315' src='https://www.youtube.com/embed/LadBQe2-AYc?controls=0&autoplay=1' width='560'></iframe>
-</div>
-</div>
-<!-- <script type='text/javascript'>
-        if ($(".music-box").length) {
-            var musicBtn = $(".music-box-toggle-btn")
-                musicBox = $(".music-holder");
-            musicBtn.on("click", function () {
-                musicBox.toggleClass("toggle-music-box");
-                return false;
-            })
-        }
-    </script> -->
-</body>
+            <div class="card mg-10" id="card2" style="display: none;">
+                <div class="card mg-10">
+                    <div style="height: 30px;"></div>
+                    <div class="card__title--name">
+                        <h1> 
+                            <span style="color: red;">Chúc mừng</span>
+                            <br> Bạn đã chọn đúng! <br>
+                            <span> Đợi chờ Crush thích bạn như đợi đến ngày 30 Tết năm nay vậy! Tốn công vô ích! 🥲 </span>
+                        </h1>
+                    </div>
+                    <div style="height: 30px;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <script >
+            function showMess()
+            {
+                document.getElementById("card1").style.display = 'none';
+                document.getElementById("card2").style.display = "inline";
+            }
+        </script>
+    </body>
 </html>
